@@ -3,7 +3,7 @@ from .models import Post
 
 from django.contrib import admin
 from .models import Post
-from .models import facultyModel
+# from .models import facultyModel
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status','created_on')
@@ -14,4 +14,4 @@ class PostAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 
-admin.site.register(facultyModel)
+# admin.site.register(facultyModel)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html leng="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+
+    </head>
+
+    <body>
+        
+    </style>
+
+       <h2>Home</h2>
+       
+       <div class = "posts">
+      
+        {% block content %}
+         {% for post in posts %} 
+         <div class = "post">
+             <h4 class = "title">{{ post.title }}</h4>
+             <h6 class = "createddatetime">{{post.created_on}}</h6> <h6 class = "updateddatetime">{{post.updated_on}}</h6>
+      
+             <p class = "body">{{ post.content | safe }}</p>
+          </div>
+        {% endfor %} 
+      
+
+
+
+
+        {% endblock content %}
+      
+    
+      
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="py-3 bg-grey">
+            <p class="m-0 text-dark text-center ">Copyright &copy; WizImg</p>
+        </footer>
+    </body>
+</html>

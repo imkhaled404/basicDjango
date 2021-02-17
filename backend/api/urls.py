@@ -2,7 +2,7 @@ from django.urls import path
 
 from . import views
 
-# from . import faculty
+from . import faculty
 # from .navigationBar import about
 # from . import news
 # from . import singlePage
@@ -11,7 +11,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-#     path('/faculty', faculty.faculty, name='Faculty'),
+     path('faculty', faculty.faculty, name='Faculty'),
 #     path('/About_CSE', about.about, name='About CSE'),
 #  #   path('/Message_from_the_chairman', views.index, name=''),
 #  #    path('/Industry_advisory panel', views.index, name=''),

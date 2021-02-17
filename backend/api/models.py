@@ -24,30 +24,31 @@ class Post(models.Model):
         return self.title
 
 
-# class facultyModel(models.Model):
-#     username = models.CharField(max_length=20, unique=True)
-#   #  slug = models.SlugField(max_length=200, unique=True, label='Search tag')
-#     FullName = models.CharField(max_length=200, required= False)
-#     BanglaName = models.CharField(max_length=200, required= False)
-#     image = models.ImageField(upload_to='userImages/', blank = True)
-#  #   author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='posts')
-#     Designation = models.CharField(max_length=200, required=False)
-#     Email= models.CharField(max_length=200, required = False )
-#     phone = models.CharField(max_length=200, required = False )
-#     Website = models.CharField(max_length=200, required = False )
-#     otherContact = models.CharField(max_length=200, required = False)
-#     personalDetails = RichTextField()
-#     ResearchArea = RichTextField()
-#     Research_Interest =  RichTextField()
-#     Academic_Background = RichTextField()
-#     Selected_Publications = RichTextField()
-#     Journal_and_Conferences = RichTextField()
-#     Journal_Papers = RichTextField()
-#     Conference_Papers = RichTextField()
-#     updated_on = models.DateTimeField(auto_now= True)
-#     created_on = models.DateTimeField(auto_now_add=True)
-#     status = models.IntegerField(choices=STATUS, default=1)
+class faculty(models.Model):
+     ShortName = models.CharField(max_length=20, unique=True)
+   #  slug = models.slugfield(max_length=200, unique=true, label='search tag')
+     fullname = models.CharField(max_length=200)
+     banglaname = models.CharField(max_length=200)
+    # image = models.imagefield(upload_to='userimages/', blank = true)
+     #author = models.foreignkey(User, on_delete= models.CASCADE, related_name='faculty')
+     designation = models.CharField(max_length=200)
+     email= models.CharField(max_length=200)
+     phone = models.CharField(max_length=200)
+     website = models.CharField(max_length=200)
+     othercontact = models.CharField(max_length=200)
+     personaldetails = Richtextfield()
+     researcharea = Richtextfield()
+     research_interest =  Richtextfield()
+     academic_background = Richtextfield()
+     selected_publications = Richtextfield()
+     journal_and_conferences = Richtextfield()
+     journal_papers = Richtextfield()
+     conference_papers = Richtextfield()
+     updated_on = models.DateTimeField(auto_now= True)
+     created_on = models.DateTimeField(auto_now_add=True)
+     status = models.IntegerField(choices=STATUS, default=1)
+     
 
-#     def __str__(self):
-#         return self.title
+     def __str__(self):
+         return self.fullname
         
